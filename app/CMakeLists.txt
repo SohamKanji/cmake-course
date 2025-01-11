@@ -1,2 +1,7 @@
-add_executable(Executable main.cc)
-target_link_libraries(Executable PUBLIC Library)
+set(EXECUTABLE_SOURCE_FILES "main.cc")
+
+add_executable(${EXECUTABLE_NAME} ${EXECUTABLE_SOURCE_FILES})
+target_link_libraries(${EXECUTABLE_NAME} PUBLIC 
+    Library
+    nlohmann_json
+)
